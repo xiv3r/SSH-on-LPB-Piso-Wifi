@@ -8,18 +8,18 @@ This simple approach allows you to access internal system that are beyond LPB's 
 LPB Piso Wifi software is based on the older and extinct version of Armbian (Debian Stretch 9)
 
 # Problems
-LPB Piso WiFi images are distributed as headless, and it does not have any kernel modules (driver) for HDMI. Also it is rare to find the specific kernel version `4.19.62-sunxi` to be able to compile it with support for HDMI displays.
+LPB Piso WiFi images are distributed as headless server, and it does not have any kernel modules (driver) for HDMI. Also it is rare to find the specific kernel version, like from orange pi one's `4.19.62-sunxi` to be able to compile it with support for HDMI displays in accordance with patches for different SBCs.
 
-In it's admin dashboard, it has restricted terminal in which even the `apt` command is useless.
+In it's admin dashboard, it has restricted terminal tool in which even the `apt` command is useless.
 
-So our solution is to use `ssh` to communicate to the LPB's system which is armbian.
+So our solution is to use `ssh` to communicate to the LPB's system which is based on armbian.
 
 # HowTo - Change Root Password
 Before setting up ssh to connect remotely, we need to change the root password because we don't even know the password for it.
 
 So we must change password directly from `shadow` file located at `/etc`.
 
-To do this, you will need Linux distributions, or debian-based WSL for windows system; and a card reader for your SD CARD. And don't forget to be a root user by `sudo -i` or `su`.
+To do this, you will need Linux distributions, a termux for Android devices, or debian-based WSL for windows system; and a card reader for your SD CARD. And don't forget to be a root user by `sudo -i` or `su`.
 
 Then you need to generate a SHA-512 hash based on your chosen password:
 
@@ -73,6 +73,11 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 Just type `yes`.
 
 Anyway, LPB Piso Wifi image distribution uses port 320 as default for ssh instead of port 22.
+
+# FA-Q
+I can't download or update anything from `apt`, why?
+
+> Of course this uses an old and crusty version of Armbian so repositories about it and Debian stretch 9 does not exist. You need to change the URL from `sources.list` located at `/etc/apt`.
 
 # Disclaimer
 Do not EVER attempt to connect to the stationed PISO WIFI via `ssh` if you don't even owned them.
