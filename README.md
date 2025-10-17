@@ -4,6 +4,7 @@ This simple approach allows you to access internal system that are beyond LPB's 
 - access processes, scripts, configuration or any
 - execute installed armbian (or Linux) binaries
 - monitor what's going on with it's operation, it's like giving you much more detailed logs
+- fix LPB Piso WiFi related issues
 
 LPB Piso Wifi software is based on the older and extinct version of Armbian (Debian Stretch 9)
 
@@ -73,6 +74,12 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 Just type `yes`.
 
 Anyway, LPB Piso Wifi image distribution uses port 320 as default for ssh instead of port 22.
+
+# Screenshots
+
+![A message status after login into ssh](isa.png)A welcome message and a system status after login into ssh
+
+![lpb service from systemctl](dalawa.png)Looking at status of LPB service from `systemctl` if it is loaded and enabled, or not
 
 # FA-Q
 I can't download or update anything from `apt`, why?
