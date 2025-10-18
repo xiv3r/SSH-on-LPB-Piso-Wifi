@@ -9,18 +9,18 @@ This simple approach allows you to access internal system that are beyond LPB's 
 LPB Piso Wifi software is based on the older and extinct version of Armbian (Debian Stretch 9)
 
 # Problems
-LPB Piso WiFi images are distributed as headless server, and it does not have any kernel modules (driver) for HDMI. Also it is rare to find the specific kernel version, like from orange pi one's `4.19.62-sunxi` to be able to compile it with support for HDMI displays in accordance with patches for different SBCs.
+LPB Piso WiFi images are distributed as headless server, and it does not have any kernel modules (driver) for HDMI video. Also it is rare to find the specific kernel version, like from orange pi one's `4.19.62-sunxi` to be able to compile it with support for HDMI displays in accordance with patches for different SBCs.
 
 In it's admin dashboard, it has restricted terminal tool in which even the `apt` command is useless.
 
-So our solution is to use `ssh` to communicate to the LPB's system which is based on armbian.
+So our solution is to use `ssh` to communicate to the LPB's system remotely which is based on armbian.
 
 # HowTo - Change Root Password
-Before setting up ssh to connect remotely, we need to change the root password because we don't even know the password for it.
+Before setting up ssh to connect remotely, we need to change the root password because we don't even know the default password of it.
 
-So we must change password directly from `shadow` file located at `/etc`.
+So we must change password directly from `shadow` file located at `/etc`, since reversing the hash to reveal the password is much difficult.
 
-To do this, you will need Linux distributions, a termux for Android devices, or debian-based WSL for windows system; and a card reader for your SD CARD. And don't forget to be a root user by `sudo -i` or `su`.
+To do this, you will need any Linux distributions, a termux for Android devices, or debian-based WSL for windows system; and a card reader for your SD CARD. And don't forget to be a root user by `sudo -i` or `su`.
 
 Then you need to generate a SHA-512 hash based on your chosen password:
 
@@ -48,7 +48,7 @@ sudo sed -i "s|^root:[^:]*:|root:${HASH}:|" /mnt/lpb/etc/shadow
 sudo chown root:root /mnt/lpb/etc/shadow
 sudo chmod 600 /mnt/lpb/etc/shadow
 ```
-Note that depending on where does your system mount your SD card, you may locate it to `media` instead of copying this with `/mnt/lpb/etc`
+Note that depending on where does your system mount your SD card, it may be `mnt` or `media` so dont forget to locate and change the command above.
 
 # HowTo - Connect it to ssh
 
@@ -60,7 +60,7 @@ Then do this:
 ```
 ssh root@IP_ADDRESS -p 320
 ```
-where `IP_ADDRESS` is the assigned IP Address of the Single Board Computer (LPB Piso Wifi) from your main router (ISP's GPON).
+where `IP_ADDRESS` is the assigned IP Address of the Single Board Computer (LPB Piso Wifi) from your main router (ISP's GPON), or the gateway address of the LPB Piso WiFi, which is `10.0.0.1` if you are connected directly to the Piso WiFi system.  
 
 And if you ever asked for this:
 ```
