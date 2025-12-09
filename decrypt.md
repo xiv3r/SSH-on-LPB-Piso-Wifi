@@ -13,9 +13,15 @@ Now some .js files are still unreadable and they are written as hex and octal es
 
 so we need to translate them into human-readable characters. To do this, execute:
 ```
-python3 de-obfuscate.py /decrypted/filename
+php deobfuscator.php <input> <output>
 ```
 
-where filename is the .js file you wish to traslate it.
+where the `<input>` is the .js file you wish to traslate it. For the `<output>`, you can enter the file name for it.
 
 Now you can inspect and modify the code as you wish.
+
+# DEPLOY MODIFIED .js CODE
+After you change or modify the code, you need to encrypt it first because the lpb does not render deobfuscated code correctly, it just shows blank webpage. To do this, execute:
+```
+php encrypt_lpb.php <input_file> <output_file>
+```
