@@ -1,3 +1,6 @@
+# SSH on LPB Piso WiFi
+For tutorial on how to access LPB Piso WiFi's SSH, please refer to this page: [SSH](SSH.md). I update this repository to include modifications and reverse-engineering stuffs.
+
 # MODIFYING LPB PISO WIFI SECTION
 
 This is the main page dedicated for modification of LPB Piso WiFi image file, like accessing SSH and enabling VNC server, as well as reverse-engineering their binary, and decryption of .js files.
