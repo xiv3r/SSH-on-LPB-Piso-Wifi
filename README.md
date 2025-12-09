@@ -5,6 +5,9 @@ For tutorial on how to access LPB Piso WiFi's SSH, please refer to this page: [S
 
 This is the main page dedicated for modification of LPB Piso WiFi image file, like accessing SSH and enabling VNC server, as well as reverse-engineering their binary, and decryption of .js files.
 
+# FOR STARTERS
+LPB Piso WiFi is just a software sitting on top of an old version of Armbian, which basically just a debian-based distribution.
+
 # LOCATION OF LPB SOFTWARE
 Most of the frontend scripts are located inside `/etc/bluetooth/bluetooth` directory while some are just inside `/etc` directory. There is a systemd service that is responsible for running lpb related files. While digging deeper, it turns out that there is one file inside `/usr/local/php7/lob/php` directory where there is a file called `lpbpisowifi.so`. That file is also considered the "heart" of all operations because it had possessed a hardcoded key which it plays a big role in decrypting files located at `/etc/bluetooth/bluetooth/admin/encrypted` directory (further analysis at the Reports section).
 
