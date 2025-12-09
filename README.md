@@ -1,4 +1,4 @@
-# SSH on LPB Piso WiFi
+,p# SSH on LPB Piso WiFi
 For tutorial on how to access LPB Piso WiFi's SSH, please refer to this page: [SSH](SSH.md). I update this repository to include modifications and reverse-engineering stuffs.
 
 # MODIFYING LPB PISO WIFI SECTION
@@ -16,4 +16,8 @@ This was written in Zephir, a high-level language designed specifically for crea
 
 # Sections:
 [SSH](SSH.md)
+
 [Reports](re-eng.md)
+
+# Disclaimer
+This information you have seen and the provided software you have obtained are for your personal use only. Do not redistribute your own modded version of lpb anywhere as it may alarm the owner about this.
