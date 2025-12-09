@@ -27,6 +27,7 @@ $count = 0;
 $success = 0;
 
 echo "[*] Starting Mass Decryption...\n";
+echo "[!] By Colton Silva (chinawaterstealers)\n";
 echo "[*] Cipher: $cipher\n";
 echo "[*] Key: $key\n";
 echo "[*] IV:  $iv\n\n";
