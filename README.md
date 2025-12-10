@@ -20,6 +20,8 @@ This file was written in Zephir, a high-level language designed specifically for
 # Sections:
 [SSH](SSH.md)
 
+[Database](database.md)
+
 [Reports](re-eng.md)
 
 [Decrypt](decrypt.md)
