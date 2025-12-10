@@ -18,6 +18,8 @@ php deobfuscator.php <input> <output>
 
 where the `<input>` is the .js file you wish to traslate it. For the `<output>`, you can enter the file name for it.
 
+> The developer used [Yak Pro](https://github.com/pk-fr/yakpro-po) to obfuscate the `/admin/encrypted` and some files at `/api`, and make the code unreadable or logic look like spaghetti (like `goto nonsenselabelname`). Although `deobfuscator.php` can do it's job properly by deobfuscating the hex and octal charachters, it cannot deobfuscate the `goto`. It can unnecessary to fix this but if you want to deobfuscate the spaghetti code, use [PHPDeobfuscator](https://github.com/simon816/PHPDeobfuscator).
+
 Now you can inspect and modify the code as you wish.
 
 # DEPLOY MODIFIED .js CODE
