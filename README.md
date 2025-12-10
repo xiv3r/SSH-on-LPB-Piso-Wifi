@@ -8,6 +8,17 @@ This is the main page dedicated for modification of LPB Piso WiFi image file, li
 # FOR STARTERS
 LPB Piso WiFi is just a software sitting on top of an old version of Armbian, which basically just a debian-based distribution. But the developer distributes the image file of LPB as the whole OS, so that they can easily install it by just burning it into SD cards.
 
+# WHAT YOU NEED FOR THIS COURSE:
+You need basic to intermediate knowledge of Linux/UNIX. Windows?, go away! I'm allergic to that OS.
+
+Also you need to know the basic usage of debian-based and systemd.
+
+You can use `Termux` for android users, `WSL` for Windows user (any distribution is fine, but<b> Kali Linux is for babies</b>)
+
+`Ghidra` is optional, for disassembling `lpbpisowifi.so` as it holds the key to decrypt .js files.
+
+Of course, you should own a LPB Piso WiFi vending machine. 
+
 # LOCATION OF LPB SOFTWARE
 Most of the frontend scripts are located inside `/etc/bluetooth/bluetooth` directory while some are just inside `/etc` directory. There is a systemd service that is responsible for running lpb related files. While digging deeper, it turns out that there is one file inside `/usr/local/php7/lpb/php` directory where there is a file called `lpbpisowifi.so`. That file is also considered the "heart" of all operations because it had possessed a hardcoded key which it plays a big role in decrypting files located at `/etc/bluetooth/bluetooth/admin/encrypted` directory (further analysis at the Reports section).
 
