@@ -27,6 +27,10 @@ I don't know exactly the role of `lpbpisowifi.so` aside from it can decrypt file
 
 This file was written in Zephir, a high-level language designed specifically for creating PHP extensions without the pain of writing raw C code. I assumed this kind of code used based on the structure and function inside binary (like `zend_register_internal_class`), and the produced error message, pointing to source files ending in .zep like this one: (`lpbpisowifi/lpb.zep:33`). 
 
+# Tested LPB Versions:
+LPB Piso WiFi version 15.3 and 15.5 are tested and they are exploitable. There are no differences on the critical files, except for additional features for the latest release. Nothing new.
+
+It uses the same hardcoded key, IV and database password, but still unknown for SSH.
 
 # Sections:
 [SSH](SSH.md)
@@ -38,6 +42,8 @@ This file was written in Zephir, a high-level language designed specifically for
 [Decrypt](decrypt.md)
 
 [Vulnerability](vuln.md)
+
+
 
 # Disclaimer
 This information you have seen and the provided software you have obtained are for your personal use only. Do not redistribute your own modded version of lpb anywhere as it may alarm the owner about this. For now, I haven't seen any cracked version of LPB yet.
