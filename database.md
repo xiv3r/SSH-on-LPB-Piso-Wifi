@@ -52,4 +52,8 @@ Now to edit contents of the database, for this example you want to change portal
 php god_mode.php "UPDATE my_settings SET portalannouncement='YOUR NEW ANNOUNCEMENT' WHERE recno=1"
 ```
 
+# Screenshots:
+![an image showing sql output](/IMAGES/sql1.png)This image shows the changed [`portalannouncement`]
+![an image showing captive portal](/IMAGES/bitdeface.png)This image shows a captive portal, with modified Portal Announcement, without involvement of admin dashboard page.
+
 > Be responsible. Do not use this to your neighbor's Piso WiFi machines.
