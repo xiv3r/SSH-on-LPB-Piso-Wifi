@@ -6,6 +6,8 @@ These are used to unlock secrets of the files inside `/admin/encrypted` director
 - `encrypt_lpb.php` is used to encrypt the file.
 - `db_parasite.php` is used to output selected databases
 - `god_mode.php` is used to control and modify databases
+- `exploit_lpb.py` is used to exploit execute.js file to give us admin password
+- `block_internet.py` is used to disconnect the LPB Piso WiFi from the ISP router. It should be used first before `exploit_lpb.py` unless the router is already disconnected to internet.
 
 # Useless Files
 - `de-obfuscate.py` this can deobfuscate the character, but it can generate broken output file which it will not properly load on browser. Use `deobfuscator.php` instead.
