@@ -79,5 +79,9 @@ sudo sysctl -w net.ipv4.ip_forward=0
 ```
 to disable forwarding of internet coming from your Linux into the LPB. This can hide the warning message `[!] WARNING: IP Forwarding is ENABLED on this machine!` if you executed `block_internet.py`.
 
+# Screenshots
+![an image showing the output of block_internet.py](/IMAGES/blocknet.png) This is an output of `block_internet.py`, a customized ARP spoofing script.
+![an image shpwing the exploit output](/IMAGES/exploit.png) This shows the exploit result, where I got the admin password, trying it to the log-in page, and it works.
+
 # Disclaimer
 This information you have seen today is for awareness only.
