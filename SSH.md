@@ -77,9 +77,9 @@ Anyway, LPB Piso Wifi image distribution uses port 320 as default for ssh instea
 
 # Screenshots
 
-![A message status after login into ssh](isa.png)A welcome message and a system status after login into ssh
+![A message status after login into ssh](/IMAGES/isa.png)A welcome message and a system status after login into ssh
 
-![lpb service from systemctl](dalawa.png)Looking at status of LPB service from `systemctl` if it is loaded and enabled, or not
+![lpb service from systemctl](/IMAGES/dalawa.png)Looking at status of LPB service from `systemctl` if it is loaded and enabled, or not
 
 # FA-Q
 I can't download or update anything from `apt`, why?
