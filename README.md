@@ -9,7 +9,7 @@ This is the main page dedicated for modification of LPB Piso WiFi image file, li
 LPB Piso WiFi is just a software sitting on top of an old version of Armbian, which basically just a debian-based distribution. But the developer distributes the image file of LPB as the whole OS, so that they can easily install it by just burning it into SD cards.
 
 # WHAT YOU NEED FOR THIS COURSE:
-You need basic to intermediate knowledge of Linux/UNIX. Windows?, go away! I'm allergic to that OS.
+You need basic to intermediate knowledge of Linux/UNIX. Windows? go away! I'm allergic to Windows!
 
 Also you need to know the basic usage of debian-based and systemd.
 
@@ -41,7 +41,7 @@ It uses the same hardcoded key, IV and database password, but still unknown for 
 
 [Decrypt](decrypt.md)
 
-[Vulnerability](vuln.md)
+[Vulnerability - FAIL OPEN](vuln.md)
 
 
 
