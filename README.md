@@ -48,4 +48,4 @@ It uses the same hardcoded key, IV and database password, but still unknown for 
 
 
 # Disclaimer
-This information you have seen and the provided software you have obtained are for your personal use only. Do not redistribute your own modded version of lpb anywhere as it may alarm the owner about this. For now, I haven't seen any cracked version of LPB yet.
+This information you have seen and the provided software you have obtained are for your personal use only. Do not redistribute your own modded version of lpb anywhere as it may alarm the owner about this. Also you can fork this repository, but do not talk about this on [PHCorner](https://phcorner.org/) or facebook group pertaining to Piso WiFi groups or group chats as it can cause trouble on the owner's small time business.
