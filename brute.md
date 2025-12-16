@@ -12,3 +12,5 @@ For Admin Dashboard:
 For SSH:
 
 - [PisoWiFi-Bruteforce](https://github.com/JyanJohn/PisoWifi-BruteForce)
+
+- [pisowifi-ssh-bruter](https://github.com/mkdirlove/pisowifi-ssh-bruter)
