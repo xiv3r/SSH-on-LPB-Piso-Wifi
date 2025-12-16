@@ -45,6 +45,8 @@ It uses the same hardcoded key, IV and database password, but still unknown for 
 
 [Vulnerability - FAIL OPEN](vuln.md)
 
+[Protect Your LPB](defense.md)
+
 [ANOTHER VULNERABILITY UNDER INVESTIGATION](vuln1.md)
 
 
