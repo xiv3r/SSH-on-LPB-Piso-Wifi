@@ -25,12 +25,12 @@ Most of the frontend scripts are located inside `/etc/bluetooth/bluetooth` direc
 ### What exactly is this `lpbpisowifi.so`
 I don't know exactly the role of `lpbpisowifi.so` aside from it can decrypt files located at `admin/encrypted/` folder or acting as DRM.
 
-This file was written in Zephir, a high-level language designed specifically for creating PHP extensions without the pain of writing raw C code. I assumed this kind of code used based on the structure and function inside binary (like `zend_register_internal_class`), and the produced error message, pointing to source files ending in .zep like this one: (`lpbpisowifi/lpb.zep:33`). 
+This file was written in Zephir, a high-level language designed specifically for creating PHP extensions without the pain of writing raw C code. I assumed this kind of code used based on the structure and function inside binary (like `zend_register_internal_class`), the produced error message, pointing to source files ending in .zep like this one: (`lpbpisowifi/lpb.zep:33`), and then inside compiled .so file: `php_info_print_table_row(2,"Powered by Zephir","Version 0.12.17-6724dbf");`. 
 
 # Tested LPB Versions:
 LPB Piso WiFi version 15.3 and 15.5 are tested and they are exploitable. There are no differences on the critical files, except for additional features for the latest release. Nothing new.
 
-It uses the same hardcoded key, IV and database password, but still unknown for SSH.
+It uses the same hardcoded key, IV and database password, but still unknown for SSH (I don't have much time for this).
 
 # Sections:
 [SSH](SSH.md)
