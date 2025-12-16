@@ -8,10 +8,19 @@ This is the most interesting part in investigating the LPB Piso WiFi database. T
 
 - or, we can execute a php backdoor to connect to MySQL without database password.
 
+# Default Database Password
+For accessing database through commandline `mysql` or webpage based phpMyAdmin (GUI), here is the default password:
+
+<B>Username:</b> lpbpisowifi
+
+<B>Password:</b> NkncqvS6vTkF1BTs
+
 # phpMyAdmin
 LPB Piso WiFi has a phpMyAdmin installed. You can login using the provided default username and password [here](http://10.0.0.1/phpMyAdmin-4.9.11-english). In this way, looking at the admin password is much easier than exploiting LPB or accessing SSH, because the database credentials is set to default and there is no way to change it from dashboard, unless the devs or experienced distributors changed it.
 
 To see the admin's password, just navigate to `rpi_wifi` and select `my_users` at the left.
+
+> phpMyAdmin is only available on version 15.5, confirmed not installed on 15.4 and 15.3, and only seen this on Orange Pi One board. Not confirmed on other older version or boards or x86 archs. I don't know why the devs installed or possible they'd forgot to remove it, as this alone is their biggest mistake. So if you can't reach phpMyAdmin, it means it uses old version or a small chance that they removed by the distributor or technicians.
 
 # Harvest Administrator Password (From 10.0.0.1/admin)
 
