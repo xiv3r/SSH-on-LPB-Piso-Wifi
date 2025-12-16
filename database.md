@@ -1,5 +1,5 @@
 # Database Blitz
-This is the most interesting part in investigating the LPB Piso WiFi database. The database holds the setting configuration, customer's data; and even the most critical one, the administrator's password. If anyone can able to hack the ssh, they can obtain the database password and then view the databases with these methods:
+This is the most interesting part in investigating the LPB Piso WiFi database. The database holds the setting configuration, customer's data; and even the most critical one, the administrator's password. If anyone can able to hack the SSH or login to phpMyAdmin, they can obtain the database password and then view the databases with these methods:
 - The passwords are stored either inside the encryption blob in the `lpbpisowifi.so` (Theoretical, but hard to find. You need to have experience with disassembly), or;
 
 - inside `/etc/bluetooth/bluetooth/py/heartbeat.py` and `/etc/txt/` files, or scattered on all possible root directories if the devs changed it or;
@@ -9,7 +9,9 @@ This is the most interesting part in investigating the LPB Piso WiFi database. T
 - or, we can execute a php backdoor to connect to MySQL without database password.
 
 # phpMyAdmin
-LPB Piso WiFi has a phpMyAdmin installed. You can login using the provided username and password [here](http://10.0.0.1/phpMyAdmin-4.9.11-english).
+LPB Piso WiFi has a phpMyAdmin installed. You can login using the provided default username and password [here](http://10.0.0.1/phpMyAdmin-4.9.11-english). In this way, looking at the admin password is much easier than exploiting LPB or accessing SSH, because the database credentials is set to default and there is no way to change it from dashboard, unless the devs or experienced distributors changed it.
+
+To see the admin's password, just navigate to `rpi_wifi` and select `my_users` at the left.
 
 # Harvest Administrator Password (From 10.0.0.1/admin)
 
