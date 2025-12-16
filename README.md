@@ -32,6 +32,8 @@ LPB Piso WiFi version 15.3 and 15.5 are tested and they are exploitable. There a
 
 It uses the same hardcoded key, IV and database password, but still unknown for SSH (I don't have much time for this).
 
+Their official account claims about their update, by reworking the whole LPB system. If they somehow fix the vulnerability issues, that will be great.
+
 # Sections:
 [SSH](SSH.md)
 
