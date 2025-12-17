@@ -1,6 +1,6 @@
-# ANOTHER VULNERABILITY - UNDER INVESTIGATION
+# ANOTHER VULNERABILITY - CONCLUDED!
 
-While the Fail-Open is proven via blocking the communication between the client and server, it seems that there is another vulnerability in which it is still under investigation. There is a misconfiguration on where an attacker can send a payload to a Piso WiFi machine and let them execute the command without using SSH through means of RCE.
+While the Fail-Open is proven via blocking the communication between the client and server, it seems that there is another vulnerability in which the investigation was concluded on Dec 17, 2025. There is a misconfiguration on where an attacker can send a payload to a Piso WiFi machine and let them execute the command without using SSH through means of RCE.
 
 # About Default Admin Password
 Although you change the password for admin, it seems that it's default password `123456789` is still valid, but cannot be used for admin webpage. Evidence of this shows on this output:
@@ -28,12 +28,16 @@ where in the python script:
         return
 ```
 
+> Update for this: Even if you received a cookie, this also gonna not work on low-level logins.
+
 # Which Misconfiguration?
 It is suspected that the `www-data` user is the weakest point (`www-data ALL=NOPASSWD: ALL`), allowing any web shell to escalate to root immediately.
 
 # OK which of them is Vulnerable?
 Code in execute.js (`runspeedtest`, `saveportalsettings`) is vulnerable to command injection via `exec()`.
 
-# But why under investigation?
+# But why investigation failed?
 The entry point for the exploit seems problematic, where the web request `POST /index.php action=execute.js` is not reaching the `exec()` call with the injected variable in which initially I abandoned it. Also based on several tests, the only blocker is lpb::conn() crashing on injection, and every single payload triggered a Syntax Error (or 500 error, inferred from "Triggered Syntax Error" logic).
-For now, I still looking for possible workaround for `execute.js` and finding other entry points.
+
+# BUT!
+The only entry point in which we can inject malicious code is through Portal Design page inside Admin Dashboard (if you got somehow got access). For comprehensive information about this, refer to [Multiple Upload Vulnerability](upload.md)
