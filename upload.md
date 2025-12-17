@@ -30,7 +30,7 @@ Easy! This does not required root password. Just do:
 
 where `binary` is the command you wish to execute.
 
-For those attackers who wish to change the SSH password easily, use this reference [here](ssh.md).
+For those attackers who wish to change the SSH password easily, use this reference [here](SSH.md).
 
 # Before you Upload .js file
 
