@@ -8,7 +8,7 @@ As we discussed on Another Vulnerability section, `www-data` is permitted to exe
 
 # Uploading Modified or Exploit .js File
 
-In this example, we can do this vulnerability via modifying encrypted `terminal.js` and `termiexec.js` to launch our custonized terminal browser, in which the original version does limits you to 5 commands (`wget`, `ping`, `unzip`, `rm`, and `apt`), but with our modified version, you can execute all linux commands, although there are limitations like limited permission or it requires you to run in Linux terminal.
+In this example, we can do this vulnerability via modifying encrypted `terminal.js` and `termiexec.js` to launch our custonized terminal browser, in which the original version does limits you to 5 commands (`wget`, `ping`, `unzip`, `rm`, and `apt`), but with our modified version, you can execute all linux commands, although other interactive TUIs requires you to run in Linux terminal.
 
 > Initially, the Terminal under Extra Features is only available for version 15.5, and untested on 15.3. I will test it on another day.
 
@@ -19,6 +19,18 @@ From Admin Dashboard, Navigate the menu to the right, scroll down, and then unde
 ```
 
 where you will see the information about the current logged-in user. If you see `www-data`, then you did it!
+
+# How about if I want to be a ROOT USER?
+
+Easy! This does not required root password. Just do: 
+
+```
+/bin/usr/sudo binary
+```
+
+where `binary` is the command you wish to execute.
+
+For those attackers who wish to change the SSH password easily, use this reference [here](ssh.md).
 
 # Before you Upload .js file
 
