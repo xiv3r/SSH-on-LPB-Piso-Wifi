@@ -31,7 +31,7 @@ where in the python script:
 > Update for this: Even if you received a cookie, this also gonna not work on low-level logins.
 
 # Which Misconfiguration?
-It is suspected that the `www-data` user is the weakest point (`www-data ALL=NOPASSWD: ALL`), allowing any web shell to escalate to root immediately.
+It is suspected that the `www-data` user is the weakest point (`www-data ALL=NOPASSWD: ALL`), allowing any web shell to escalate to root immediately (possible given hint by this [poster](https://phcorner.org/threads/how-i-hacked-lpb-pisowifi-orangepi-raspberry-pi-root-access.2372499/#post-30510983)). <p><b><i>Conclusion:</i> This misconfiguration is proven and it can be abused by provided files at [`EXPLOIT`](/EXPLOIT/) in this repository.</b></p>
 
 # OK which of them is Vulnerable?
 Code in execute.js (`runspeedtest`, `saveportalsettings`) is vulnerable to command injection via `exec()`.
@@ -40,4 +40,4 @@ Code in execute.js (`runspeedtest`, `saveportalsettings`) is vulnerable to comma
 The entry point for the exploit seems problematic, where the web request `POST /index.php action=execute.js` is not reaching the `exec()` call with the injected variable in which initially I abandoned it. Also based on several tests, the only blocker is lpb::conn() crashing on injection, and every single payload triggered a Syntax Error (or 500 error, inferred from "Triggered Syntax Error" logic).
 
 # BUT!
-The only entry point in which we can inject malicious code is through Portal Design page inside Admin Dashboard (if you got somehow got access). For comprehensive information about this, refer to [Multiple Upload Vulnerability](upload.md)
+The only entry point in which we can inject malicious code is through Portal Design page inside Admin Dashboard (if you somehow got access). For comprehensive information about this, refer to [Multiple Upload Vulnerability](upload.md)
