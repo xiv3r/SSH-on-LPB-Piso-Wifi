@@ -1,5 +1,5 @@
 # SSH on LPB Piso WiFi
-For tutorial on how to access LPB Piso WiFi's SSH, please refer to this page: [SSH](SSH.md). I update this repository to include modifications and reverse-engineering stuffs.
+For tutorial on how to access LPB Piso WiFi's SSH, please refer to this page: [SSH](SSH.md). I reworked this repository to include modifications, hacking and reverse-engineering stuffs.
 
 > I often update this repository daily until I am running out of ideas.
 
@@ -11,7 +11,7 @@ This is the main page dedicated for modification of LPB Piso WiFi image file, li
 LPB Piso WiFi is just a software sitting on top of an old version of Armbian, which basically just a debian-based distribution. But the developer distributes the image file of LPB as the whole OS, so that they can easily install it by just burning it into SD cards.
 
 # WHAT YOU NEED FOR THIS COURSE:
-You need basic to intermediate knowledge of Linux/UNIX. Windows? go away! I'm allergic to Windows!
+You need basic to intermediate knowledge of Linux/UNIX. Windows? go away! I'm allergic to Windows! MAC OS? Accepted!
 
 Also you need to know the basic usage of debian-based and systemd.
 
@@ -20,6 +20,10 @@ You can use `Termux` for android users, `WSL` for Windows user (any distribution
 `Ghidra` is optional, for disassembling `lpbpisowifi.so` as it holds the key to decrypt .js files.
 
 Of course, you should own a LPB Piso WiFi vending machine. 
+
+### "HELP ME or HOW TO DO THIS" SCENARIO
+
+I will not provide any helps pertaining to usage of scripts so know them yourself.
 
 # LOCATION OF LPB SOFTWARE
 Most of the frontend scripts are located inside `/etc/bluetooth/bluetooth` directory while some are just inside `/etc` directory. There is a systemd service that is responsible for running lpb related files. While digging deeper, it turns out that there is one file inside `/usr/local/php7/lpb/php` directory where there is a file called `lpbpisowifi.so`. That file is also considered the "heart" of all operations because it had possessed a hardcoded key which it plays a big role in decrypting files located at `/etc/bluetooth/bluetooth/admin/encrypted` directory (further analysis at the Reports section).
@@ -55,7 +59,9 @@ Their official account claims about their update, by reworking the whole LPB sys
 
 [ANOTHER VULNERABILITY CONCLUDED](vuln1.md)
 
+# NEXT GOAL?
 
+After I extracted all of the LPB's weaknesses, I can proceed to other brands with less security update.
 
 # Disclaimer
 This information you have seen and the provided software you have obtained are for your personal use only. Do not redistribute your own modded version of lpb anywhere as it may alarm the owner about this. Also you can fork this repository, but do not talk about this on [PHCorner](https://phcorner.org/) or facebook group pertaining to Piso WiFi groups or group chats as it can cause trouble on the owner's small time business.
