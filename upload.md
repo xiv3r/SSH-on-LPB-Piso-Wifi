@@ -15,10 +15,10 @@ In this example, we can do this vulnerability via modifying encrypted `terminal.
 From Admin Dashboard, Navigate the menu to the right, scroll down, and then under SETTINGS, click Portal Design. Upload both already encrypted `terminal.js` and `termiexec.js` (which is located at /EXPLOIT directory of this repository) at the Images. And then after that, go to http://10.0.0.1/admin/index?action=../../assets/images/terminal.js. To execute a command, tap at the black input box, and do this example:
 
 ```
-/bin/ip a
+/bin/usr/whoami
 ```
 
-where you will see the information about the LPB's network interfaces and their IP addresses
+where you will see the information about the current logged-in user. If you see `www-data`, then you did it!
 
 # Before you Upload .js file
 
