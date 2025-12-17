@@ -36,7 +36,7 @@ It is suspected that the `www-data` user is the weakest point (`www-data ALL=NOP
 # OK which of them is Vulnerable?
 Code in execute.js (`runspeedtest`, `saveportalsettings`) is vulnerable to command injection via `exec()`.
 
-# But why investigation failed?
+# But why Investigation Failed for Payload Injection?
 The entry point for the exploit seems problematic, where the web request `POST /index.php action=execute.js` is not reaching the `exec()` call with the injected variable in which initially I abandoned it. Also based on several tests, the only blocker is lpb::conn() crashing on injection, and every single payload triggered a Syntax Error (or 500 error, inferred from "Triggered Syntax Error" logic).
 
 # BUT!
