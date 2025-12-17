@@ -1,9 +1,11 @@
 # SSH on LPB Piso WiFi
 For tutorial on how to access LPB Piso WiFi's SSH, please refer to this page: [SSH](SSH.md). I update this repository to include modifications and reverse-engineering stuffs.
 
+> I often update this repository daily until I am running out of ideas.
+
 # MODIFYING LPB PISO WIFI SECTION
 
-This is the main page dedicated for modification of LPB Piso WiFi image file, like accessing SSH and enabling VNC server, as well as reverse-engineering their binary, and decryption of .js files.
+This is the main page dedicated for modification of LPB Piso WiFi image file, like accessing SSH and enabling VNC server, as well as reverse-engineering their binary, hacking everything and decryption of .js files.
 
 # FOR STARTERS
 LPB Piso WiFi is just a software sitting on top of an old version of Armbian, which basically just a debian-based distribution. But the developer distributes the image file of LPB as the whole OS, so that they can easily install it by just burning it into SD cards.
@@ -47,9 +49,11 @@ Their official account claims about their update, by reworking the whole LPB sys
 
 [Vulnerability - FAIL OPEN](vuln.md)
 
+[Multiple Upload Vulnerability](upload.md)
+
 [Protect Your LPB](defense.md)
 
-[ANOTHER VULNERABILITY UNDER INVESTIGATION](vuln1.md)
+[ANOTHER VULNERABILITY CONCLUDED](vuln1.md)
 
 
 
