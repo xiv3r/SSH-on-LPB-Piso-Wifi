@@ -1,9 +1,9 @@
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                     Version 2, December 2004
-										 https://www.wtfpl.net
+					  https://www.wtfpl.net
 
                      SSH on LPB Piso WiFi
-			by Colton Silva, known as chinawaterstealers or 信長 西沢
+			by Colton Silva, known as chinawaterstealers
                     December 18, 2025 PHT+8
 
  Everyone is permitted to copy and distribute verbatim or modified
