@@ -40,4 +40,4 @@ Code in execute.js (`runspeedtest`, `saveportalsettings`) is vulnerable to comma
 The entry point for the exploit seems problematic, where the web request `POST /index.php action=execute.js` is not reaching the `exec()` call with the injected variable in which initially I abandoned it. Also based on several tests, the only blocker is lpb::conn() crashing on injection, and every single payload triggered a Syntax Error (or 500 error, inferred from "Triggered Syntax Error" logic).
 
 # BUT!
-The only entry point in which we can inject malicious code is through Portal Design page inside Admin Dashboard (if you somehow got access). For comprehensive information about this, refer to [Multiple Upload Vulnerability](upload.md)
+The only entry point in which we can inject malicious code is through Portal Design page inside Admin Dashboard (if you somehow got access). For comprehensive information about this, refer to [Portal Design Upload Vulnerability](upload.md)
