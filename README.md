@@ -1,7 +1,7 @@
 # SSH on LPB Piso WiFi
 For tutorial on how to access LPB Piso WiFi's SSH, please refer to this page: [SSH](SSH.md). I reworked this repository to include modifications, hacking and reverse-engineering stuffs.
 
-> I often update this repository daily until I am running out of ideas.
+> LPB Piso WiFi investigation is now complete (by December 18, 2025). All of the source code, and documentation can be distributed freely in academic or personal purposes. Protected by WTFPL license.
 
 # MODIFYING LPB PISO WIFI SECTION
 
@@ -61,9 +61,11 @@ Their official account claims about their update, by reworking the whole LPB sys
 
 [ANOTHER VULNERABILITY CONCLUDED](vuln1.md)
 
+[LICENSE](LICENSE.md)
+
 # NEXT GOAL?
 
 After I extracted all of the LPB's weaknesses, I can proceed to other brands with less security update.
 
 # Disclaimer
-This information you have seen and the provided software you have obtained are for your personal use only. Do not redistribute your own modded version of lpb anywhere as it may alarm the owner about this. Also you can fork this repository, but do not talk about this on [PHCorner](https://phcorner.org/) or facebook group pertaining to Piso WiFi groups or group chats as it can cause trouble on the owner's small time business.
+This information you have seen and the provided software you have obtained are for your personal use only. You can fork this repository, but do not talk about this on [PHCorner](https://phcorner.org/) or facebook group pertaining to Piso WiFi groups or group chats as it can cause trouble on the owner's small time business.
