@@ -55,7 +55,7 @@ Their official account claims about their update, by reworking the whole LPB sys
 
 [Vulnerability - FAIL OPEN](vuln.md)
 
-[Multiple Upload Vulnerability](upload.md)
+[Portal Design Upload Vulnerability](upload.md)
 
 [Protect Your LPB](defense.md)
 
