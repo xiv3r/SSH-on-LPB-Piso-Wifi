@@ -1,12 +1,16 @@
-# Upload Vulnerability
+# Upload Vulnerability - The JavaScript Monster
 
-There is a vulnerability where you can upload files on Portal Design within Admin Dashboard. It accepts jpg, apk, MP3, MP4, and js; and any other file extensions are not supported. Because .js is accepted, regardless of it's content (malicious), an attacker can use this advantage to execute payload inside LPB system without accessing SSH, as hacking admin dashboard is easier than SSH.
+There is a vulnerability where you can upload files on Portal Design within Admin Dashboard. It accepts jpg, apk, MP3, MP4, and js; and any other file extensions are not supported. Because .js is accepted, regardless of it's content (malicious), an attacker can use this advantage to execute command inside LPB system without accessing SSH, as hacking admin dashboard is easier than SSH.
 
 Uploaded files goes to `/assets/images` directory, and writable output file can go to `/admin`.
 
 As we discussed on Another Vulnerability section, `www-data` is permitted to execute binaries in `/bin`, `/sbin`, or `/usr/bin` directory, view configs at `/etc` directory, or anything you can't imagine.
 
-# Vulnerability Example:
+This is the most ugliest design ever made by LPB developers. They put it's shell execution ability in an unprotected environment, and they made a mistake in it's system configuration. Look at the examples below to see what I mean.
+
+> In these examples, it requires you to have access to Admin Dashboard before you load these URLs.
+
+# Vulnerability Example - TERMINAL on LPB:
 
 In this example, we can do this vulnerability via modifying encrypted `terminal.js` and `termiexec.js` to launch our customized terminal browser, in which the original version does limits you to 5 commands (`wget`, `ping`, `unzip`, `rm`, and `apt`), but with our modified version, you can execute all linux commands, although other interactive TUIs, like `htop` requires you to run in Linux terminal.
 
@@ -30,7 +34,13 @@ Easy! This does not required root password. Just do:
 
 where `binary` is the command you wish to execute.
 
-For those attackers who wish to change the SSH password easily, use this reference [here](SSH.md).
+# Vulnerability Example - System Status: 
+
+This one can work for any LPB version, up to version 15.5 (recommended for 15.3 stable release) where we can abuse the System Status page of the Admin dashboard. We can execute a non-interactive commandline there, but the only difference is that it cannot accept user input. You have to change the shell command `systemstatus.js` inside `admin/encrypted` directory, in which it requires you to use three tools defined in [Decrypt](decrypt.md) section; but don't worry because I provided the modified version inside `EXPLOIT` of this repository to see the potential.
+
+Accessing this goes to http://192.168.100.44/admin/index?action=../../assets/images/systemstatus.js
+
+> For those attackers who wish to change the SSH password easily without time consuming bruteforce attack, use this reference [here](SSH.md). Applicable for both Vulnerability examples.
 
 # Before you Upload .js file
 
