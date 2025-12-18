@@ -43,6 +43,8 @@ Their official account claims about their update, by reworking the whole LPB sys
 # Sections:
 [SSH](SSH.md)
 
+[VNC + LXDE Installation](vnc.md)
+
 [Database](database.md)
 
 [Reports](re-eng.md)
