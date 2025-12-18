@@ -20,7 +20,7 @@ LPB Piso WiFi has a phpMyAdmin installed. You can login using the provided defau
 
 To see the admin's password, just navigate to `rpi_wifi` and select `my_users` at the left.
 
-> phpMyAdmin is only available on version 15.5, confirmed not installed on 15.4 and 15.3, and only seen this on Orange Pi One board. Not confirmed on other older version or boards or x86 archs. I don't know why the devs installed or possible they'd forgot to remove it, as this alone is their biggest mistake. So if you can't reach phpMyAdmin, it means it uses old version or a small chance that they removed by the distributor or technicians.
+> phpMyAdmin is only available on version 15.5, confirmed not installed on 15.4 and 15.3 inside LPB directory, and only seen this on Orange Pi One board. Not confirmed on other older version or boards or x86 archs. I don't know why the devs installed or possible they'd forgot to remove it, as this alone is their biggest mistake. So if you can't reach phpMyAdmin, it means it uses old version or a small chance that they removed by the distributor or technicians.
 
 # Harvest Administrator Password (From 10.0.0.1/admin)
 
