@@ -50,5 +50,10 @@ But unlike the `terminal.js`, `systemstatus.js` is very limited and it cannot ex
 
 You still need to encrypt .js file for proper rendering, if you make changes or add a new .js file.
 
+# Screenshots
+![an image showing the portal design page, with vulnerability](/IMAGES/upload.png)This image shows the Portal Design page, with upload vulnerability highlighted.
+
+![an image showing the modified version of systemstatus.js](/IMAGES/systemstatus_js.png)This image shows the Modified Version of systemstatus.js page, where the highlighted are the custom command. The ls -l outputs full list of LPB directories and files, while the Malicious, even if there is no output at the text box, actually executes our malicious shell command to change the root password easily to access SSH.
+
 # Disclaimer
 Do this to your own LPB Piso WiFi.
