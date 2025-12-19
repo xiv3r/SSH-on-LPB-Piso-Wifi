@@ -38,7 +38,7 @@ where `binary` is the command you wish to execute.
 
 This one can work for any LPB version, up to version 15.5 (recommended for 15.3 stable release) where we can abuse the System Status page of the Admin dashboard. We can execute a non-interactive commandline there, but the only difference is that it cannot accept user input. You have to change the shell command `systemstatus.js` inside `admin/encrypted` directory, in which it requires you to use three tools defined in [Decrypt](decrypt.md) section; but don't worry because I provided the modified version inside `EXPLOIT` of this repository to see the potential.
 
-> Modified `systemstatus.js` has a command that automatically changes the root password into `chinawaterstealers`. So that after you load his file to browser and then after that, if you connect it into SSH, you can use the `root` and `chinawaterstealers` credentials.
+> Modified `systemstatus.js` has a command that automatically changes the root password into `chinawaterstealers`. So that after you load this file to browser and then after that, if you connect it into SSH, you can use the `root` and `chinawaterstealers` credentials.
 
 Accessing this goes to http://10.0.0.1/admin/index?action=../../assets/images/systemstatus.js
 
