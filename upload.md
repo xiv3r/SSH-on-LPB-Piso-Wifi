@@ -1,10 +1,10 @@
 # Upload Vulnerability - The JavaScript Monster
 
-There is a vulnerability where you can upload files on Portal Design within Admin Dashboard. It accepts jpg, apk, MP3, MP4, and js; and any other file extensions are not supported. Because .js is accepted, regardless of it's content (malicious), an attacker can use this advantage to execute command inside LPB system without accessing SSH, as hacking admin dashboard is easier than SSH.
+There is a vulnerability where you can upload files on Portal Design within Admin Dashboard. It accepts jpg, apk, MP3, MP4, and js; and any other file extensions like .py or .php are not supported. Because .js is accepted, regardless of it's content (malicious), an attacker can use this advantage to execute command inside LPB system without accessing SSH, as hacking admin dashboard is easier than SSH.
 
 Uploaded files goes to `/assets/images` directory, and writable output file can go to `/admin`.
 
-As we discussed on Another Vulnerability section, `www-data` is permitted to execute binaries in `/bin`, `/sbin`, or `/usr/bin` directory, view configs at `/etc` directory, or anything you can't imagine.
+As we discussed on Another Vulnerability section, `www-data` is permitted to execute binaries in `/bin`, `/sbin`, `/usr/local/bin`, `/opt` or `/usr/bin` directory, view configs at `/etc` directory, or anything you can't imagine.
 
 This is the most ugliest design ever made by LPB developers. They put it's shell execution ability in an unprotected environment, and they made a mistake in it's system configuration. Look at the examples below to see what I mean.
 
@@ -36,15 +36,15 @@ where `binary` is the command you wish to execute.
 
 # Vulnerability Example - System Status: 
 
-This one can work for any LPB version, up to version 15.5 (recommended for 15.3 stable release) where we can abuse the System Status page of the Admin dashboard. We can execute a non-interactive commandline there, but the only difference is that it cannot accept user input. You have to change the shell command `systemstatus.js` inside `admin/encrypted` directory, in which it requires you to use three tools defined in [Decrypt](decrypt.md) section; but don't worry because I provided the modified version inside `EXPLOIT` of this repository to see the potential.
+This one can work for any LPB version, up to version 15.5 (recommended for 15.3 stable release) where we can abuse the System Status page of the Admin dashboard. We can execute a non-interactive commandline there, but the only difference is that it cannot accept user input. You have to change the shell command inside `systemstatus.js` of `admin/encrypted` directory, in which it requires you to use three tools defined in [Decrypt](decrypt.md) section; but don't worry because I provided the modified version inside `EXPLOIT` of this repository to see the potential.
 
 > Modified `systemstatus.js` has a command that automatically changes the root password into `chinawaterstealers`. So that after you load this file to browser and then after that, if you connect it into SSH, you can use the `root` and `chinawaterstealers` credentials.
 
 Accessing this goes to http://10.0.0.1/admin/index?action=../../assets/images/systemstatus.js
 
-But unlike the `terminal.js`, `systemstatus.js` is very limited and it cannot execute most of `/usr/bin` directory, but this is suffice for basic system operations.
+But unlike the `terminal.js`, `systemstatus.js` is very limited and it cannot execute most of `/usr/bin` directory (like `whoami`, or a command without argument or parameter), but this is suffice for basic system operations.
 
-> For those attackers who wish to change the SSH password easily without time consuming bruteforce attack, the easiest way is `printf "root:changeme" | sudo chpasswd && printf "Password Changed"` for both vulnerability examples.
+> For those who wish to change the SSH password easily without time consuming bruteforce attack, the easiest way is `printf "root:changeme" | sudo chpasswd && printf "Password Changed"` for both vulnerability examples.
 
 # Before you Upload .js file
 
@@ -53,7 +53,7 @@ You still need to encrypt .js file for proper rendering, if you make changes or 
 # Screenshots
 ![an image showing the portal design page, with vulnerability](/IMAGES/upload.png)This image shows the Portal Design page, with upload vulnerability highlighted.
 
-![an image showing the modified version of systemstatus.js](/IMAGES/systemstatus_js.png)This image shows the Modified Version of systemstatus.js page, where the highlighted are the custom command. The ls -l outputs full list of LPB directories and files, while the Malicious, even if there is no output at the text box, actually executes our malicious shell command to change the root password easily to access SSH.
+![an image showing the modified version of systemstatus.js](/IMAGES/systemstatus_js.png)This image shows the Modified Version of `systemstatus.js` page, where the highlighted are the custom command. The `ls -l` outputs full list of LPB directories and files, while the Malicious, even if there is no output at the text box, actually executes our malicious shell command to change the root password easily to access SSH.
 
 # Disclaimer
 Do this to your own LPB Piso WiFi.
