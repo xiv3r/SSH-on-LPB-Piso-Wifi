@@ -2,7 +2,7 @@
 
 If you own a LPB Piso WiFi machine, READ THIS!
 
-Because, at this time of writing (Dec. 2025), LPB is still stuck at version 15.5 released by 2023, and still no fix on their design flaws.
+Because, at this time of writing (Dec. 2025), LPB is still stuck at version 15.5 released by 2023, and still no latest fix on their design flaws.
 
 I might suggest you to use other Piso WiFi software brands with recent update and security fixes (preferably ADOPiSoft), or if you still want to use LPB because you bought their crappy license (in which I can use LPB without license), then secure your Piso WiFi system by these advice.
 
@@ -26,8 +26,14 @@ In the event that you installed the LPB by yourself or you just bought it from d
 
 ### TIP 3: Remove phpMyAdmin
 
-If you are using version 15.5 and phpMyAdmin is existed, you must remove it inside `/etc/bluetooth/bluetooth` as this is the easiest way to get your admin password, regardless if you change it.
+If you are using version 15.5 and phpMyAdmin is existed, you must remove it inside `/etc/bluetooth/bluetooth` as this is the easiest way to get your admin password, regardless if you change it. Or the best way is:
+
+### TIP 4: Do not use the buggy 15.5 img version
+Not only unstable but there are built-in terminal that is suspectible to direct commandline to LPB Piso WiFi machine.
+
+### TIP 5: Monitor and watch
+You must monitor and watch any suspected illegal activities inside admin dashboard.
 
 # Why Changing database Password is not Recommended?
 
-Database Password is hardcoded in /etc/txt and other backend files, so changing it might break other functionalities of LPB. Not really sure about this so I will investigate it further.
+Database Password is hardcoded in `/etc/txt` and other backend files, so changing it might break other functionalities of LPB. Not really sure about this so I will investigate it further.
