@@ -40,6 +40,8 @@ It uses the same hardcoded key, IV and database password, but still unknown for 
 
 Their official account claims about their update, by reworking the whole LPB system. If they somehow fix the vulnerability issues, that will be great.
 
+But I did not test the VLAN version, so expect that some will not work, some might.
+
 # Sections:
 [SSH](SSH.md)
 
