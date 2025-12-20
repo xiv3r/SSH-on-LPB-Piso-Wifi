@@ -68,4 +68,4 @@ Their official account claims about their update, by reworking the whole LPB sys
 After I extracted all of the LPB's weaknesses, I can proceed to other brands with less security update.
 
 # Disclaimer
-This information you have seen and the provided software you have obtained are for your personal use only. You can fork this repository, but do not talk about this on [PHCorner](https://phcorner.org/) or facebook group pertaining to Piso WiFi groups or group chats as it can cause trouble on the owner's small time business.
+This information you have seen and the provided software you have obtained are for your personal use only.
