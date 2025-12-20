@@ -1,6 +1,6 @@
 # Database Blitz
 This is the most interesting part in investigating the LPB Piso WiFi database. The database holds the setting configuration, customer's data; and even the most critical one, the administrator's password. If anyone can able to hack the SSH or login to phpMyAdmin, they can obtain the database password and then view the databases with these methods:
-- The passwords are stored either inside the encryption blob in the `lpbpisowifi.so` (Theoretical, but hard to find. You need to have experience with disassembly), or;
+- (THIS IS FALSE) The passwords are stored either inside the encryption blob in the `lpbpisowifi.so`.
 
 - inside `/etc/bluetooth/bluetooth/py/heartbeat.py` and `/etc/txt/` files, or scattered on all possible root directories if the devs changed it or;
 
@@ -71,6 +71,16 @@ php god_mode.php "UPDATE my_settings SET portalannouncement='YOUR NEW ANNOUNCEME
 
 # Screenshots:
 ![an image showing sql output](/IMAGES/sql1.png)This image shows the changed [`portalannouncement`]
+
 ![an image showing captive portal](/IMAGES/bitdeface.png)This image shows a captive portal, with modified Portal Announcement, without involvement of admin dashboard page.
 
-> Be responsible. Do not use this to your neighbor's Piso WiFi machines.
+# Screenrecord
+
+This shows how to login to phpMyAdmin to access LPB Piso WiFi's database (only available for 15.5 img file).
+
+https://github.com/user-attachments/assets/aae094dd-8a07-4216-996e-51a9c9257738
+
+
+
+# Disclaimer
+Be responsible. Do not use this to your neighbor's Piso WiFi machines.
