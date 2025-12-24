@@ -67,7 +67,7 @@ But I did not test the VLAN version, so expect that some will not work, some mig
 
 # NEXT GOAL?
 
-Here, we targeted our next brand victim, the PisoFi system. It turns out that it can easily craft RCE exploit for PisoFi than LPB because LPB's internal system somehow has sanitations with their critical code.
+Here, we targeted our next brand victim, PisoFi. It turns out that it can easily craft RCE exploit for PisoFi than LPB because LPB's internal system somehow has sanitations with their critical code. To see the interesting PisoFi system, here's the [link](https://github.com/ColtonSilvaonKnoxKontor/PisoFi-Vulnerability-and-Exploits).
 
 # Disclaimer
 This information you have seen and the provided software you have obtained are for your personal use only.
