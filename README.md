@@ -67,7 +67,7 @@ But I did not test the VLAN version, so expect that some will not work, some mig
 
 # NEXT GOAL?
 
-After I extracted all of the LPB's weaknesses, I can proceed to other brands with less security update.
+Here, we targeted our next brand victim, the PisoFi system. It turns out that it can easily craft RCE exploit for PisoFi than LPB because LPB's internal system somehow has sanitations with their critical code.
 
 # Disclaimer
 This information you have seen and the provided software you have obtained are for your personal use only.
